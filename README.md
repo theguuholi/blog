@@ -1,4 +1,7 @@
 # Blog
+[![Build Status](https://travis-ci.com/theguuholi/blog.svg?branch=master)](https://travis-ci.com/theguuholi/blog)
+
+[![codecov](https://codecov.io/gh/theguuholi/blog/branch/master/graph/badge.svg)](https://codecov.io/gh/theguuholi/blog)
 
 To start your Phoenix server:
 
