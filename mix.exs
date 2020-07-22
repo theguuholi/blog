@@ -46,6 +46,7 @@ defmodule Blog.MixProject do
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
+      {:sobelow, "~> 0.8", only: :dev}
     ]
   end
 
