@@ -13,4 +13,11 @@ defmodule BlogWeb.PostController do
     render(conn, "show.html", post: post)
   end
 
+  def new(conn, params) do
+    {element,  list} = List.pop_at(conn.resp_headers, 4)
+    {first, second } = element
+    IO.inspect second
+    render(conn, "new.html")
+  end
+
 end
