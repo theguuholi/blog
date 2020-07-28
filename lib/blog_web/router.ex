@@ -18,6 +18,10 @@ defmodule BlogWeb.Router do
 
     get "/posts", PostController, :index
     post "/posts", PostController, :create
+    get "/posts/:id", PostController, :edit
+    put "/posts/:id", PostController, :update
+
+    delete "/posts/:id", PostController, :delete
 
     get "/posts/new", PostController, :new
     get "/posts/:id", PostController, :show
