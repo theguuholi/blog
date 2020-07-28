@@ -3,10 +3,10 @@ defmodule Blog.Posts.Post do
   import Ecto.Changeset
 
   schema "posts" do
-      field :title, :string
-      field :description, :string
+    field :title, :string
+    field :description, :string
 
-      timestamps()
+    timestamps()
   end
 
   def changeset(post, attrs \\ %{}) do
