@@ -4,18 +4,16 @@ defmodule Blog.PostsTest do
 
   @valid_post %{
     title: "Phoenix Framework",
-    description:
-      "Lorem"
+    description: "Lorem"
   }
 
   @update_post %{
     title: "updated",
-    description:
-      "updated"
+    description: "updated"
   }
 
   def post_fixture(_attrs \\ %{}) do
-    {:ok,  post} = Posts.create_post(@valid_post)
+    {:ok, post} = Posts.create_post(@valid_post)
     post
   end
 
@@ -35,10 +33,9 @@ defmodule Blog.PostsTest do
     assert post.description == "Lorem"
   end
 
-
   test "update_post/2 with valid data" do
     post = post_fixture()
-    assert {:ok, %Post{} = post} = Posts.update_post(post.id, @update_post)
+    assert {:ok, %Post{} = post} = Posts.update_post(post, @update_post)
     assert post.title == "updated"
   end
 
@@ -47,7 +44,4 @@ defmodule Blog.PostsTest do
     assert post = Posts.delete(post.id)
     assert_raise Ecto.NoResultsError, fn -> Posts.get_post!(post.id) end
   end
-
-
-
 end
