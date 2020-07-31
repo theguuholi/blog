@@ -4,7 +4,6 @@ defmodule Blog.Repo.Migrations.CreateComments do
   def change do
     create table(:comments) do
       add :content, :string
-
       timestamps()
     end
 
