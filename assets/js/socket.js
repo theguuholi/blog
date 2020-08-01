@@ -80,12 +80,6 @@ const createSocket = (post_id) => {
   });
 
 
-  document.getElementById("btn-comentar2").addEventListener("click", () => {
-    channel.push("comment:add1", { content: "2123" })
-    document.getElementById("comentario").value = ""
-  });
-
-
 }
 
 
