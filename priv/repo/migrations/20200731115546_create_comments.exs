@@ -6,6 +6,5 @@ defmodule Blog.Repo.Migrations.CreateComments do
       add :content, :string
       timestamps()
     end
-
   end
 end
