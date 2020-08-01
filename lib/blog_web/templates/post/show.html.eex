@@ -29,12 +29,6 @@
     </form>
   </div>
 <ul class="collection">
-  <li class="collection-item avatar">
-    <i class="material-icons circle red">play_arrow</i>
-    <span class="title">Title</span>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, minus repudiandae? Quos quasi placeat laboriosam id hic itaque, blanditiis sequi repellendus eius totam eligendi laudantium? Quam dicta dolorem ipsam eum?
-    </p>
-  </li>
 </ul>
 
 
