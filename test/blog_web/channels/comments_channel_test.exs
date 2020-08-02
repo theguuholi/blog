@@ -14,7 +14,6 @@ defmodule BlogWeb.CommentsChannelTest do
     {:ok, socket: socket, post: post}
   end
 
-
   test "deve se conectar ao socket", %{socket: socket, post: post} do
     {:ok, comentarios, socket} = subscribe_and_join(socket, "comments:#{post.id}", %{})
     assert post.id == socket.assigns.post_id
