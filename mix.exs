@@ -45,7 +45,7 @@ defmodule Blog.MixProject do
   def application do
     [
       mod: {Blog.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ueberauth_google]
     ]
   end
 
@@ -72,7 +72,8 @@ defmodule Blog.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:sobelow, "~> 0.8", only: :dev},
-      {:excoveralls, "~> 0.13.0", only: :test}
+      {:excoveralls, "~> 0.13.0", only: :test},
+      {:ueberauth_google, "~> 0.9"}
     ]
   end
 
