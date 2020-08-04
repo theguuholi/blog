@@ -4,6 +4,7 @@ defmodule BlogWeb.AuthController do
 
   plug Ueberauth
 
+  @spec callback(Plug.Conn.t(), map) :: Plug.Conn.t()
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, %{"provider" => provider}) do
     user = %{
       token: auth.credentials.token,
