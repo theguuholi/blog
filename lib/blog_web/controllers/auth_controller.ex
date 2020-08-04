@@ -4,7 +4,12 @@ defmodule BlogWeb.AuthController do
 
   plug Ueberauth
 
-  @spec callback(Plug.Conn.t(), map) :: Plug.Conn.t()
+  def logout(conn, _) do
+    conn
+   |> configure_session(drop: true)
+   |> redirect(to: Routes.page_path(conn, :index))
+  end
+
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, %{"provider" => provider}) do
     user = %{
       token: auth.credentials.token,
