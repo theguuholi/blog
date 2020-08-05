@@ -6,7 +6,6 @@ defmodule BlogWeb.PostController do
   plug BlogWeb.Plug.RequireAuth when action in [:create, :new, :edit, :update, :delete]
   plug :check_owner when action in [:edit, :update, :delete]
 
-
   def index(conn, _params) do
     posts = Posts.list_posts()
     render(conn, "index.html", posts: posts)
@@ -65,8 +64,9 @@ defmodule BlogWeb.PostController do
 
   def check_owner(conn, _) do
     %{params: %{"id" => post_id}} = conn
+
     if Posts.get_post!(post_id).user_id == conn.assigns.user.id do
-    conn
+      conn
     else
       conn
       |> put_flash(:error, "Voce nao tem permissao para esta operacao")
