@@ -26,8 +26,7 @@ user = %{
 user_2 = %{
   email: "23424324@gmail.com",
   first_name: nil,
-  image:
-    "https://lh5.43443.com/-6jn5VKVJbhc/AAAAAAAAAAI/AAAAAAAAAAA/3hDKgJz7Zs8/photo.jpg",
+  image: "https://lh5.43443.com/-6jn5VKVJbhc/AAAAAAAAAAI/AAAAAAAAAAA/3hDKgJz7Zs8/photo.jpg",
   last_name: nil,
   provider: "google",
   token:
