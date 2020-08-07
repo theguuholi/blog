@@ -23,6 +23,17 @@ user = %{
     "ya29.a0AfH6SMBwEyYfefc2DUrCMnbKXUMG048p2zLTnDidWzGs6-PCDfoIrIg2AZXfFft2vFpVW_sqNoqCe51cKaVJEaU1Upv61ZPZQXtjexp10KC372KN2c-ryN821diQlzncMeIaOXaC_1XKlfSgpKC-DsGXgRP9Jf1n69o"
 }
 
+user_2 = %{
+  email: "23424324@gmail.com",
+  first_name: nil,
+  image:
+    "https://lh5.43443.com/-6jn5VKVJbhc/AAAAAAAAAAI/AAAAAAAAAAA/3hDKgJz7Zs8/photo.jpg",
+  last_name: nil,
+  provider: "google",
+  token:
+    "ya29.4343434-PCDfoIrIg2AZXfFft2vFpVW_sqNoqCe51cKaVJEaU1Upv61ZPZQXtjexp10KC372KN2c-ryN821diQlzncMeIaOXaC_1XKlfSgpKC-DsGXgRP9Jf1n69o"
+}
+
 post = %{
   title: "PG",
   description:
@@ -30,4 +41,6 @@ post = %{
 }
 
 {:ok, user} = Accounts.create_user(user)
-{:ok, phoenix} = Posts.create_post(user, post)
+{:ok, _user_2} = Accounts.create_user(user_2)
+
+{:ok, _phoenix} = Posts.create_post(user, post)
