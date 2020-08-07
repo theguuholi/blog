@@ -23,7 +23,7 @@ defmodule Blog.AccountsTest do
       token: "some updated token"
     }
     @invalid_attrs %{
-      email: nil,
+      email: "teste@teste",
       first_name: nil,
       image: nil,
       last_name: nil,
