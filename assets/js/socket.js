@@ -66,6 +66,7 @@ const createSocket = (post_id) => {
   let channel = socket.channel(`comments:${post_id}`, {})
   channel.join()
     .receive("ok", resp => {
+      console.log(resp.comments)
       pegaComentarios(resp.comments)
     })
     .receive("error", resp => {
@@ -91,14 +92,14 @@ function pegaComentarios(commentarios) {
 }
 
 function incluirComentario(event) {
-  document.querySelector(".collection").innerHTML +=   template(event.comment)
+  document.querySelector(".collection").innerHTML += template(event.comment)
 }
 
 function template(comment) {
   return `
     <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Title</span>
+      <img src="${comment.user.image}" alt="" class="circle">
+      <span class="title">${comment.user.email}</span>
       <p>${comment.content}</p>
     </li>
   `;

@@ -20,7 +20,12 @@ defmodule BlogWeb.PostControllerTest do
   test "listar todos os posts", %{conn: conn} do
     user = Blog.Accounts.get_user!(1)
     Blog.Posts.create_post(user, @valid_post)
-    conn = get(conn, Routes.post_path(conn, :index))
+
+    conn =
+      conn
+      |> Plug.Test.init_test_session(user_id: user.id)
+      |> get(Routes.post_path(conn, :index))
+
     assert html_response(conn, 200) =~ "Phoenix Framework"
   end
 
